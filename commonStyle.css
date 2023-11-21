@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Rubik', sans-serif;
+}
+
+/* Add CSS for the main content area */
+.content {
+margin-left: 250px; /* Width of the sidebar */
+padding: 20px;
+}
+
+.vertical {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Style the table */
+table.tableCommon {
+  width: 80%;
+  border-collapse: collapse;
+}
+
+table.tableCommon thead, table.tableCommon td {
+  border: 3px solid #ddd;
+}
+
+table.tableCommon thead, table.tableCommon td {
+  padding: 15px;
+  text-align: center;
+}
+
+table.tableCommon thead {
+  background-color: #f2f2f2;
+  font-weight: 600;
+}
+
+table.tableCommon tr:hover {
+  background-color: #f5f5f5;
+}
+
+.container {
+    border-radius: 24px;
+}
+
+input {
+    border-radius: 12px;
+}
+
+/* Apply a fixed sidebar position */
+.sidebar {
+    height: 100%;
+    width: 250px; /* Adjust the width as needed */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0074d9; /* Sidebar background color */
+    padding-top: 20px;
+  }
+  
+  /* Style the wordmark (your company logo) */
+  .wordmark {
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #fff; /* Text color for the wordmark */
+  }
+  
+  .wordmark h1 {
+    font-size: 20px; /* Adjust the font size as needed */
+  }
+  
+  /* Style the sidebar links */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin: 0;
+  }
+  
+  ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff; /* Text color for the links */
+    font-size: 16px; /* Adjust the font size as needed */
+  }
+
+  ul li a.active{
+    background-color: #002647;
+  }
+
+  ul li a.active:hover{
+    background-color: #002647;
+  }
+  
+  ul li a:hover {
+    background-color: #014987; /* Background color on hover */
+  }
+  
+  /* Style the logout button */
+  .logout {
+    background-color: #f44336; /* Button background color */
+    color: #fff; /* Text color for the button */
+    border: none;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .logout a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .logout:hover {
+    background-color: #d32f2f; /* Background color on hover */
+  }
+
+   /* Style for the line separator */
+   .separator {
+    border-top: 2px solid #adabab;
+    margin: 20px 0;
+}

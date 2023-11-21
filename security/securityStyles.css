@@ -1,0 +1,19 @@
+
+/* Style for radio buttons */
+input[type="radio"] {
+    margin-right: 5px;
+    }
+    
+    /* Style for radio containers */
+    .radio-container {
+    display: flex;
+    }
+    
+    .radio-container label {
+    margin: 6px 0;
+    }
+    
+    .inputUrl {
+        padding: 5px;
+        width: auto
+    }
