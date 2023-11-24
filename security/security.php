@@ -28,7 +28,7 @@
             <li><a href="../firewall/firewall.php"><iconify-icon icon="ion:shield-half-outline"></iconify-icon> Firewall</a></li>
         </ul>
     
-        <button class="logout"><a href="../index.php">Logout</a></button>
+        <button class="logout"><a href="../_php/logout.php">Logout</a></button>
     </nav>
 
      <div class="content">
@@ -36,23 +36,55 @@
         <h2>URL FILTER</h2>
         <p>Please select the list type and configuration list entry can configure up to 100. </p>
     
-        <!-- Container for "URL Addr Filter" -->
         <div class="radio-container">
             <label for="entry1">URL Addr Filter:</label>
-            <input type="radio" id="entry1" name="listEntry" value="allow" checked>
-            <label for="entry1">Disable</label>
-            <input type="radio" id="entry1" name="listEntry" value="block">
-            <label for="entry1">Enable</label>
+            <input type="radio" id="entry1-disable" name="listEntry" value="disable" checked>
+            <label for="entry1-disable">Disable</label>
+            <input type="radio" id="entry1-enable" name="listEntry" value="enable">
+            <label for="entry1-enable">Enable</label>
         </div>
-        
+
         <!-- Container for "Filter Mode" -->
-        <div class="radio-container">
+        <div class="radio-container" id="filterModeContainer">
             <label for="entry2">Filter Mode:</label>
-            <input type="radio" id="entry2" name="listEntry" value="allow" checked>
-            <label for="entry2">Blacklist</label>
-            <input type="radio" id="entry2" name="listEntry" value="block">
-            <label for="entry2">White list</label>
+            <input type="radio" id="entry2-blacklist" name="listEntry" value="blacklist" checked>
+            <label for="entry2-blacklist">Blacklist</label>
+            <input type="radio" id="entry2-whitelist" name="listEntry" value="whitelist">
+            <label for="entry2-whitelist">Whitelist</label>
         </div>
+
+        <script>
+                        // Get references to the radio buttons and the filter mode container
+            const entry1Disable = document.getElementById('entry1-disable');
+            const entry1Enable = document.getElementById('entry1-enable');
+            const filterModeContainer = document.getElementById('filterModeContainer');
+
+            // Function to enable/disable the filter mode container
+            function toggleFilterModeContainer() {
+                if (entry1Enable.checked) {
+                    filterModeContainer.classList.remove('disabled');
+                    // Enable all radio inputs in the filter mode container
+                    const radios = filterModeContainer.querySelectorAll('input[type="radio"]');
+                    radios.forEach(radio => {
+                        radio.disabled = false;
+                    });
+                } else {
+                    filterModeContainer.classList.add('disabled');
+                    // Disable all radio inputs in the filter mode container
+                    const radios = filterModeContainer.querySelectorAll('input[type="radio"]');
+                    radios.forEach(radio => {
+                        radio.disabled = true;
+                    });
+                }
+            }
+
+            // Add event listeners to the radio buttons
+            entry1Disable.addEventListener('change', toggleFilterModeContainer);
+            entry1Enable.addEventListener('change', toggleFilterModeContainer);
+
+            // Initial state setup
+            toggleFilterModeContainer();
+                    </script>
         
         <!-- Line separator -->
         <div class="separator"></div>

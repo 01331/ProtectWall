@@ -20,7 +20,7 @@
             <li><a class="active" href="#"><iconify-icon icon="ion:shield-half-outline"></iconify-icon> Firewall</a></li>
         </ul>
     
-        <button class="logout"><a href="../index.php">Logout</a></button>
+        <button class="logout"><a href="../_php/logout.php">Logout</a></button>
     </nav>
 
     <div class="content">
